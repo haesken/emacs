@@ -1,0 +1,18 @@
+; Zenburn Theme
+(require-package 'zenburn-theme)
+(load-theme 'zenburn t)
+
+; Disable menu, tool, & scroll bars
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+; Highlight matching parens
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+
+;; Rainbow Delimiters
+(require-package 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+(provide 'init-appearance)
