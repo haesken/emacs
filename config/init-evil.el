@@ -28,4 +28,10 @@
 (require 'evil-indent-textobject)
 (evil-mode t)
 
+;; Relative Line Numbers
+(global-linum-mode t)
+(require-package 'linum-relative)
+(require 'linum-relative)
+(linum-relative-toggle)
+
 (provide 'init-evil)
