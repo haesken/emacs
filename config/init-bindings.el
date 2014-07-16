@@ -30,6 +30,8 @@
 
     (define-key evil-normal-state-map (kbd "H") 'evil-first-non-blank)
     (define-key evil-normal-state-map (kbd "L") 'evil-end-of-visual-line)
+    (define-key evil-motion-state-map (kbd "H") 'evil-first-non-blank)
+    (define-key evil-motion-state-map (kbd "L") 'evil-end-of-visual-line)
 
     (define-key evil-normal-state-map (kbd "Y") (kbd "y$"))
 )
