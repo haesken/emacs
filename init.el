@@ -41,7 +41,7 @@
     init-lisp
     ;; init-markdown
 
-    ;; -- Evil & Commands
+    ;; --- Evil & Commands ---
     init-evil
     init-macros
     ;; init-misc

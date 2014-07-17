@@ -2,12 +2,12 @@
 (require-package 'color-theme-solarized)
 (load-theme 'solarized-dark)
 
-; Disable menu, tool, & scroll bars
+;; Disable menu, tool, & scroll bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-; Highlight matching parens
+;; Highlight matching parens
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 

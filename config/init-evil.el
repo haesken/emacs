@@ -14,7 +14,7 @@
 (require-package 'evil-leader)
 (require-package 'evil-nerd-commenter)
 (require-package 'evil-indent-textobject)
-; (require-package 'evil-matchit)
+;; (require-package 'evil-matchit)
 
 (require 'evil-leader)
 (global-evil-leader-mode)
