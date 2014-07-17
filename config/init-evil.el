@@ -12,7 +12,6 @@
 
 (require-package 'evil)
 (require-package 'evil-leader)
-(require-package 'evil-nerd-commenter)
 (require-package 'evil-indent-textobject)
 ;; (require-package 'evil-matchit)
 
@@ -20,9 +19,8 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 
-; (setq evilnc-hotkey-comment-operator ",,")
+(require-package 'evil-nerd-commenter)
 (require 'evil-nerd-commenter)
-; (evilnc-default-hotkeys)
 
 (require 'evil)
 (require 'evil-indent-textobject)
