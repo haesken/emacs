@@ -52,3 +52,6 @@
 
 (dolist (module dotemacs-modules)
     (require module))
+
+;; --- Things that need to be loaded last ---
+(require 'init-after)
