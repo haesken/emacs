@@ -15,8 +15,4 @@
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
-;; Show line & column number
-(line-number-mode t)
-(column-number-mode t)
-
 (provide 'init-appearance)
