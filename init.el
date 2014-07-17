@@ -6,11 +6,6 @@
     "The storage location for various persistent files."
     :group 'dotemacs)
 
-;; Disable GUI elements
-(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(unless (display-graphic-p) (menu-bar-mode -1))
-
 ;; Load files in config/
 (add-to-list 'load-path (concat user-emacs-directory "config"))
 
