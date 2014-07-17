@@ -1,6 +1,6 @@
-; Zenburn Theme
-(require-package 'zenburn-theme)
-(load-theme 'zenburn t)
+;; Solarized Theme (sellout)
+(require-package 'color-theme-solarized)
+(load-theme 'solarized-dark)
 
 ; Disable menu, tool, & scroll bars
 (menu-bar-mode -1)
