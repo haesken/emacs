@@ -29,5 +29,6 @@
 (require-package 'linum-relative)
 (require 'linum-relative)
 (linum-relative-toggle)
+(linum-relative-format "%3s ")
 
 (provide 'init-evil)
