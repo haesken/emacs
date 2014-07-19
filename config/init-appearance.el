@@ -29,6 +29,13 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
+;; Powerline
+(require-package 'powerline)
+(require 'powerline)
+
+; (powerline-default-theme)
+(powerline-vim-theme)
+
 ;; Rainbow Delimiters
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
