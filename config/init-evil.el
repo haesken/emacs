@@ -1,14 +1,12 @@
 (setq evil-search-module 'evil-search)
 (setq evil-magic 'very-magic)
 
-(setq evil-emacs-state-cursor '("red" box))
-(setq evil-normal-state-cursor '("green" box))
-(setq evil-visual-state-cursor '("orange" box))
-(setq evil-insert-state-cursor '("red" bar))
-(setq evil-replace-state-cursor '("red" bar))
-(setq evil-operator-state-cursor '("red" hollow))
-
-(setq evilnc-hotkey-comment-operator "gc")
+(setq evil-emacs-state-cursor '(monokai-fg box))
+(setq evil-normal-state-cursor '(monokai-fg box))
+(setq evil-visual-state-cursor '(monokai-fg box))
+(setq evil-insert-state-cursor '(monokai-fg box))
+(setq evil-replace-state-cursor '(monokai-fg box))
+(setq evil-operator-state-cursor '(monokai-fg box))
 
 (require-package 'evil)
 (require-package 'evil-leader)
