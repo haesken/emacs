@@ -30,7 +30,7 @@
     ;; init-company
 
     ;; --- Syntax Checking
-    ;; init-flycheck
+    init-flycheck
 
     ;; --- Filetypes ---
     init-lisp
