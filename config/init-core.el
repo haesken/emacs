@@ -6,11 +6,9 @@
       auto-save-list-file-prefix
       (concat dotemacs-cache-directory "auto-save-list/saves-"))
 
-
 ;; better scrolling
 (setq scroll-conservatively 9999
       scroll-preserve-screen-position t)
-
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
