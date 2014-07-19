@@ -34,6 +34,8 @@
     (define-key evil-motion-state-map (kbd "L") 'evil-end-of-visual-line)
 
     (define-key evil-normal-state-map (kbd "Y") (kbd "y$"))
+
+    (define-key evil-motion-state-map ";" 'evil-ex)
 )
 
 (provide 'init-bindings)
