@@ -20,6 +20,7 @@
 (require-package 'evil-nerd-commenter)
 (require 'evil-nerd-commenter)
 
+(setq evil-shift-width 4)
 (require 'evil)
 (require 'evil-indent-textobject)
 (evil-mode t)
