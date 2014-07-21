@@ -27,6 +27,7 @@
     ;; --- Basics ---
     init-core
     init-appearance
+    init-gui
 
     ;; --- Completion & Snippets ---
     ;; init-yasnippet
@@ -38,7 +39,7 @@
 
     ;; --- Filetypes ---
     init-lisp
-    ;; init-markdown
+    init-markdown
 
     ;; --- Evil & Commands ---
     init-evil
