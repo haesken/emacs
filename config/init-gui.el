@@ -1,8 +1,3 @@
-; Set default gui font
-(if window-system (
-    (add-to-list 'default-frame-alist '(font . "Deja Vu Sans Mono Bold 12"))
-    (set-face-attribute 'default t :font "Deja Vu Sans Mono Bold 12")))
-
 ; Disable Mouse Wheel
 (mouse-wheel-mode -1)
 

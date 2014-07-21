@@ -3,13 +3,13 @@
 (load-theme 'monokai t)
 
 ;; Fonts
-(set-default-font "Deja Vu Sans Mono:weight=bold")
+(set-frame-font "Deja Vu Sans Mono:weight=bold")
 (add-to-list 'initial-frame-alist '(font . "Deja Vu Sans Mono:weight=bold"))
 (add-to-list 'default-frame-alist '(font . "Deja Vu Sans Mono:weight=bold"))
 
 ;; Highlight matching parens
-(show-paren-mode 1)
 (setq show-paren-delay 0)
+(show-paren-mode 1)
 
 ;; Powerline
 (require-package 'powerline)
