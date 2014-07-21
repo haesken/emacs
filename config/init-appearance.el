@@ -1,11 +1,3 @@
-;; Solarized Theme (sellout)
-; (require-package 'color-theme-solarized)
-; (load-theme 'solarized-dark)
-
-;; Zenburn Theme
-; (require-package 'zenburn-theme)
-; (load-theme 'zenburn)
-
 ;; Monokai Theme
 (require-package 'monokai-theme)
 (load-theme 'monokai t)
