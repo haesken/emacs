@@ -11,30 +11,42 @@
     (after "evil-leader-autoloads"
         (evil-leader/set-leader ",")
         (evil-leader/set-key
-            "b d" 'kill-this-buffer
-            "b l" 'list-buffers
-            "y s" 'copy-selection-to-clipboard
-            "p" 'paste-from-clipboard
+            "b d" 'kill-this-buffer                     ; buffer delete
+            "s v" 'split-window-right                   ; split veritcal
+            "s h" 'split-window-below                   ; split horizontal
+            "s d" 'delete-window                        ; split delete
+            "s o" 'delete-other-windows                 ; split only
+            "y s" 'copy-selection-to-clipboard          ; yank selection
+            "p" 'paste-from-clipboard                   ; paste
+            "s p" 'flyspell-mode                        ; toggle spell checking
+            "s b" 'flyspell-buffer                      ; spell check buffer
+            "s c" 'flyspell-auto-correct-word           ; try auto correct
+            ;; "s l" 'flyspell-correct-word                ; choose from list
             ))
 
+    ;; Comment or Uncomment Line/Selection
     (define-key evil-normal-state-map (kbd "gc") 'evilnc-comment-or-uncomment-lines)
 
     (global-set-key (kbd "C-w") 'evil-window-map)
-    (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
-    (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-    (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
-    (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+    (define-key evil-normal-state-map (kbd "C-w h") 'evil-window-left)
+    (define-key evil-normal-state-map (kbd "C-w j") 'evil-window-down)
+    (define-key evil-normal-state-map (kbd "C-w k") 'evil-window-up)
+    (define-key evil-normal-state-map (kbd "C-w l") 'evil-window-right)
 
     (define-key evil-motion-state-map "j" 'evil-next-visual-line)
     (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
 
+    ;; First non-whitespace character on line
     (define-key evil-normal-state-map (kbd "H") 'evil-first-non-blank)
-    (define-key evil-normal-state-map (kbd "L") 'evil-end-of-visual-line)
     (define-key evil-motion-state-map (kbd "H") 'evil-first-non-blank)
+    ;; Last character on line
+    (define-key evil-normal-state-map (kbd "L") 'evil-end-of-visual-line)
     (define-key evil-motion-state-map (kbd "L") 'evil-end-of-visual-line)
 
+    ;; Yank rest of line
     (define-key evil-normal-state-map (kbd "Y") (kbd "y$"))
 
+    ;; Remap ; to :
     (define-key evil-motion-state-map ";" 'evil-ex)
 )
 
