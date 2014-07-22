@@ -19,7 +19,7 @@
 (prefer-coding-system 'utf-8)
 
 ;; Use spaces not tabs
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; Default indent width 4 chars
 (setq tab-width 4) ;; Show tabs as 4 spaces
@@ -33,7 +33,6 @@
 (global-set-key (kbd "TAB") 'tab-to-tab-stop)
 ;; Per Mode
 ;; (define-key text-mode-map (kbd "TAB") 'tab-to-tab-stop)
-
 
 ;; No bells
 (setq ring-bell-function (lambda () ()))
@@ -60,5 +59,19 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'flyspell-buffer)
 (setq flyspell-issue-message-flag nil)
+
+(setq sentence-end-double-space nil)
+
+(require 'whitespace)
+;; Highlight trailing whitespace and tabs
+(setq-default whitespace-style '(face tabs tab-mark trailing))
+;; Display tab characters as "▶   "
+(setq whitespace-display-mappings
+  ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
+  '((tab-mark 9 [9654 9] [92 9]))); 9 TAB, 9654 BlACK RIGHT-POINTING TRIANGLE 「▶」
+
+;; Activate whitespace mode in text & programming modes
+(add-hook 'text-mode-hook 'whitespace-mode)
+(add-hook 'prog-mode-hook 'whitespace-mode)
 
 (provide 'init-core)

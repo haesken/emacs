@@ -43,4 +43,5 @@
  '(rainbow-delimiters-depth-6-face ((t (:foreground "#a1efe4"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#fd971f"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#a6e22e"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#a1efe4")))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#a1efe4"))))
+ '(whitespace-trailing ((t (:foreground "#F92672" :inverse-video t :weight bold)))))

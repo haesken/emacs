@@ -21,6 +21,9 @@
             "s p" 'flyspell-mode                        ; toggle spell checking
             "s b" 'flyspell-buffer                      ; spell check buffer
             "s c" 'flyspell-auto-correct-word           ; try auto correct
+            "t w" 'set-fill-column                      ; text width
+            ;; "t 8" 'set-fill-column 80                   ; text width 80
+            "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
             ;; "s l" 'flyspell-correct-word                ; choose from list
             ))
 
