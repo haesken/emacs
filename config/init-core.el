@@ -10,6 +10,7 @@
 (setq scroll-conservatively 9999
       scroll-preserve-screen-position t)
 
+;; Answer yes/no questions with y/n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Set default encoding to utf8

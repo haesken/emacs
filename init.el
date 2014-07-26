@@ -6,6 +6,7 @@
     "The storage location for various persistent files."
     :group 'dotemacs)
 
+;; Disable menu/tool/scroll bars
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
