@@ -30,8 +30,8 @@
     init-gui
 
     ;; --- Completion & Snippets ---
-    ;; init-yasnippet
-    ;; init-auto-complete
+    init-yasnippet
+    init-auto-complete
     ;; init-company
 
     ;; --- Syntax Checking
