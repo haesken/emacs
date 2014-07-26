@@ -59,6 +59,12 @@
 ;; Per Mode
 ;; (define-key text-mode-map (kbd "TAB") 'tab-to-tab-stop)
 
+;; Set text width
+(setq-default fill-column 80)
+(add-hook 'text-mode-hook
+          (lambda ()
+                      (set-fill-column 80)))
+
 ;; No bells
 (setq ring-bell-function (lambda () ()))
 ;; Don't make lock files
