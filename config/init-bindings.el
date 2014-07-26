@@ -25,6 +25,7 @@
             ;; "t 8" 'set-fill-column 80                   ; text width 80
             "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
             ;; "s l" 'flyspell-correct-word                ; choose from list
+            "w w" 'toggle-truncate-lines                ; word wrap
             ))
 
     ;; Comment or Uncomment Line/Selection
@@ -35,6 +36,12 @@
     (define-key evil-normal-state-map (kbd "C-w j") 'evil-window-down)
     (define-key evil-normal-state-map (kbd "C-w k") 'evil-window-up)
     (define-key evil-normal-state-map (kbd "C-w l") 'evil-window-right)
+    (define-key evil-normal-state-map (kbd "C-s v") 'split-window-right)
+    (define-key evil-normal-state-map (kbd "C-s h") 'split-window-below)
+    (define-key evil-normal-state-map (kbd "C-s d") 'delete-window)
+    (define-key evil-normal-state-map (kbd "C-s o") 'delete-other-windows)
+    (define-key evil-normal-state-map (kbd "M-e") 'yas/expand)
+    (define-key evil-insert-state-map (kbd "M-e") 'yas/expand)
 
     (define-key evil-motion-state-map "j" 'evil-next-visual-line)
     (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
