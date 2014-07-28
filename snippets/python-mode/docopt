@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: docopt
+# key: docopt
+# --
+""" ${1:Program}
+
+Usage:
+  $1.py -h | --help
+  $1.py --version
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+
+"""

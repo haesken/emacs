@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: realdir
+# key: realdir
+# --
+path.dirname(path.realpath(__file__))
