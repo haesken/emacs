@@ -25,6 +25,9 @@
 (require 'evil-indent-textobject)
 (evil-mode t)
 
+;; (add-hook 'term-mode-hook 'evil-insert-state)
+(add-hook 'term-mode-hook 'evil-emacs-state)
+
 ;; Relative Line Numbers
 (global-linum-mode t)
 (require-package 'linum-relative)

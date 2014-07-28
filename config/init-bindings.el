@@ -12,37 +12,24 @@
         (evil-leader/set-leader ",")
         (evil-leader/set-key
             "b d" 'kill-this-buffer                     ; buffer delete
-            "s v" 'split-window-right                   ; split veritcal
-            "s h" 'split-window-below                   ; split horizontal
-            "s d" 'delete-window                        ; split delete
-            "s o" 'delete-other-windows                 ; split only
             "y s" 'copy-selection-to-clipboard          ; yank selection
-            "p" 'paste-from-clipboard                   ; paste
+            "p"   'paste-from-clipboard                 ; paste
             "s p" 'flyspell-mode                        ; toggle spell checking
             "s b" 'flyspell-buffer                      ; spell check buffer
             "s c" 'flyspell-auto-correct-word           ; try auto correct
             "t w" 'set-fill-column                      ; text width
-            ;; "t 8" 'set-fill-column 80                   ; text width 80
             "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
-            ;; "s l" 'flyspell-correct-word                ; choose from list
             "w w" 'toggle-truncate-lines                ; word wrap
             ))
 
     ;; Comment or Uncomment Line/Selection
     (define-key evil-normal-state-map (kbd "gc") 'evilnc-comment-or-uncomment-lines)
 
-    (global-set-key (kbd "C-w") 'evil-window-map)
-    (define-key evil-normal-state-map (kbd "C-w h") 'evil-window-left)
-    (define-key evil-normal-state-map (kbd "C-w j") 'evil-window-down)
-    (define-key evil-normal-state-map (kbd "C-w k") 'evil-window-up)
-    (define-key evil-normal-state-map (kbd "C-w l") 'evil-window-right)
-    (define-key evil-normal-state-map (kbd "C-s v") 'split-window-right)
-    (define-key evil-normal-state-map (kbd "C-s h") 'split-window-below)
-    (define-key evil-normal-state-map (kbd "C-s d") 'delete-window)
-    (define-key evil-normal-state-map (kbd "C-s o") 'delete-other-windows)
+    ;; Expand Snippets
     (define-key evil-normal-state-map (kbd "M-e") 'yas/expand)
     (define-key evil-insert-state-map (kbd "M-e") 'yas/expand)
 
+    ;; Navigate by visual lines
     (define-key evil-motion-state-map "j" 'evil-next-visual-line)
     (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
 
@@ -59,5 +46,27 @@
     ;; Remap ; to :
     (define-key evil-motion-state-map ";" 'evil-ex)
 )
+
+;; Window Management
+;; Override evil's window management
+(eval-after-load "evil-maps"
+  (dolist
+    (map '(evil-motion-state-map
+           evil-insert-state-map
+           evil-emacs-state-map))
+    (define-key (eval map) "\C-w" nil)))
+
+;; Global Window Management
+(define-prefix-command 'my-window-map)
+(global-set-key (kbd "\C-w") 'my-window-map)
+(define-key my-window-map (kbd "h") 'windmove-left)
+(define-key my-window-map (kbd "j") 'windmove-down)
+(define-key my-window-map (kbd "k") 'windmove-up)
+(define-key my-window-map (kbd "l") 'windmove-right)
+(define-key my-window-map (kbd "v") 'split-window-right)
+(define-key my-window-map (kbd "b") 'split-window-below)
+(define-key my-window-map (kbd "x") 'delete-window)
+(define-key my-window-map (kbd "o") 'delete-other-windows)
+(define-key my-window-map (kbd "=") 'balance-windows)
 
 (provide 'init-bindings)
