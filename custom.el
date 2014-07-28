@@ -44,4 +44,5 @@
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#fd971f"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#a6e22e"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "#a1efe4"))))
+ '(show-paren-match ((t (:background "#524F52" :foreground "#FFF7FB" :inverse-video nil :weight normal))))
  '(whitespace-trailing ((t (:foreground "#F92672" :inverse-video t :weight bold)))))
