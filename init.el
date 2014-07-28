@@ -23,36 +23,26 @@
 (when (file-exists-p custom-file)
     (load custom-file))
 
-(defcustom dotemacs-modules
-    '(
-    ;; --- Basics ---
-    init-core
-    init-appearance
-    init-gui
+;; --- Basics ---
+(require 'init-core)
+(require 'init-appearance)
+(require 'init-gui)
 
-    ;; --- Completion & Snippets ---
-    init-yasnippet
-    init-auto-complete
-    ;; init-company
+;; --- Completion & Snippets ---
+(require 'init-yasnippet)
+(require 'init-auto-complete)
 
-    ;; --- Syntax Checking
-    init-flycheck
+;; --- Syntax Checking ---
+(require 'init-flycheck)
 
-    ;; --- Filetypes ---
-    init-lisp
-    init-markdown
+;; --- Filetypes ---
+(require 'init-lisp)
+(require 'init-markdown)
 
-    ;; --- Evil & Commands ---
-    init-evil
-    init-macros
-    ;; init-misc
-    init-bindings
-    )
-    "Set of modules enabled in dotemacs."
-    :group 'dotemacs)
-
-(dolist (module dotemacs-modules)
-    (require module))
+;; --- Evil & Commands ---
+(require 'init-evil)
+(require 'init-macros)
+(require 'init-bindings)
 
 ;; --- Things that need to be loaded last ---
 (require 'init-after)
