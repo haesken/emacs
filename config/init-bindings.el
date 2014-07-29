@@ -56,6 +56,11 @@
            evil-emacs-state-map))
     (define-key (eval map) "\C-w" nil)))
 
+;; Run a terminal
+(defun my-term ()
+    (interactive)
+    (ansi-term "/bin/zsh"))
+
 ;; Global Window Management
 (define-prefix-command 'my-window-map)
 (global-set-key (kbd "\C-w") 'my-window-map)
@@ -68,5 +73,6 @@
 (define-key my-window-map (kbd "x") 'delete-window)
 (define-key my-window-map (kbd "o") 'delete-other-windows)
 (define-key my-window-map (kbd "=") 'balance-windows)
+(define-key my-window-map (kbd "t") 'my-term)
 
 (provide 'init-bindings)
