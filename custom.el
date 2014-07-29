@@ -1,9 +1,11 @@
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful. ;; Your init file should contain only one such instance.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(fci-rule-width 8)
- '(flycheck-flake8rc " ~/dotfiles/emacs/config/flycheck_configs/flake8rc"))
+ '(flycheck-flake8rc " ~/dotfiles/emacs/config/flycheck_configs/flake8rc")
+ '(require-final-newline nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

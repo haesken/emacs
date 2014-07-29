@@ -1,4 +1,7 @@
 [flake8]
-# E302: Expected 2 blank lines, found 0
-ignore = E126,E128
-max-line-length = 160
+# E126
+# E128
+# E221
+# E241
+ignore = E126,E128,E221,E241
+max-line-length = 99999
