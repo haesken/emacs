@@ -28,7 +28,7 @@
  '(mode-line-inactive ((t (:inherit mode-line :background "#272822" :foreground "#75715E" :box (:line-width 1 :color "#3E3D31" :style unspecified) :weight bold))))
  '(powerline-active2 ((t (:inherit mode-line :background "#6b6b6b" :weight bold))))
  '(powerline-evil-base-face ((t (:inherit mode-line :foreground "#474747"))))
- '(powerline-evil-emacs-face ((t (:inherit powerline-evil-base-face :background "#fd5ff0"))))
+ '(powerline-evil-emacs-face ((t (:inherit powerline-evil-base-face :background "#be84ff"))))
  '(powerline-evil-insert-face ((t (:inherit powerline-evil-base-face :background "#5fd7ff"))))
  '(powerline-evil-motion-face ((t (:inherit powerline-evil-base-face :background "#ae81ff"))))
  '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "#a6e22e"))))
