@@ -89,9 +89,16 @@ def main():
     # run_in_shell("git submodule update --init --recursive")
     # run_in_shell("git submodule foreach git checkout master")
 
+    # ubuntu packages
+    # git curl python-setuptools xsel python pip python-virtualenv
+    # build-essential libgtk-3-dev libgif-dev libxpm-dev texinfo libtiff4-dev emacs
+
+    # pip packages
+    # virtualenv
+
     # If the emacs directory is not a sub directory of "dotfiles",
     # assume the emacs directory is in ~, and create symlinks to
-    # and emacs folder.
+    # the emacs folder. (for standalone installations)
     if not path.basename(path.dirname(emacs_dir)) == "dotfiles":
         print(colored_if_avail("Creating symlinks...", "yellow"))
         ensure_link(emacs_dir, path.join(path.abspath("~"), ".emacs.d"))
