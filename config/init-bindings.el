@@ -20,6 +20,7 @@
             "t w" 'set-fill-column                      ; text width
             "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
             "w w" 'toggle-truncate-lines                ; word wrap
+            "e u u" 'my-set-utf8
             ))
 
     ;; Comment or Uncomment Line/Selection

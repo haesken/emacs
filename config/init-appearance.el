@@ -51,11 +51,13 @@
                                      ; Buffer ID
                                      (powerline-buffer-id `(mode-line-buffer-id ,mode-line) 'l)
                                      (powerline-raw " ")
-                                     ; Encoding (Unicode usually)
-                                     (powerline-raw "%z" mode-line)
+                                     ; File Encoding
+                                     (powerline-raw (format "%s" (symbol-name buffer-file-coding-system)))
+                                     (powerline-raw " ")
                                      ; Modified
-                                     (when (buffer-modified-p)
-                                       (powerline-raw "+" mode-line))
+                                     (if (buffer-modified-p)
+                                       (powerline-raw "+" mode-line)
+                                       (powerline-raw "-" mode-line))
                                      ; Read Only
                                      (when buffer-read-only
                                        (powerline-raw "" mode-line))
@@ -67,24 +69,16 @@
                                      (when (and vc-mode buffer-file-name)
                                        (let ((backend (vc-backend buffer-file-name)))
                                          (when backend
-                                           (concat ;(powerline-raw "[" mode-line 'l)
-                                                   (powerline-raw (format "%s/%s" backend (vc-working-revision buffer-file-name backend)))
-                                                   ;; (powerline-raw "]" mode-line)
-                                                   (powerline-raw " ")
-                                                   ))))
-                                     ; (powerline-raw "[" mode-line 'l)
+                                           (concat (powerline-raw (format "%s/%s" backend (vc-working-revision buffer-file-name backend)))))))
+                                     (powerline-raw " ")
                                      (powerline-major-mode mode-line)
                                      (powerline-raw " ")
-                                     (powerline-process mode-line)
-                                     ; (powerline-raw "]" mode-line)
-                          ))
-                                     ; (when (boundp 'erc-modified-channels-object)
-                                     ;   (powerline-raw erc-modified-channels-object face1 'l))
                                      ; Minor Mode
-                                     ; (powerline-raw "[" mode-line 'l)
-                                     ; (powerline-minor-modes mode-line)
-                                     ; (powerline-raw "%n" mode-line)
-                                     ; (powerline-raw "]" mode-line)
+                                     ;; (powerline-raw "(" mode-line 'l)
+                                     ;; (powerline-minor-modes mode-line)
+                                     ;; (powerline-raw ")" mode-line)
+
+                                     (powerline-process mode-line)))
                           ; Right Side
                           (rhs (list
                                      ; Character count

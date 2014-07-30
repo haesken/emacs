@@ -21,4 +21,8 @@
                 (message "graphics active"))
             (insert (shell-command-to-string "xsel -o -b"))))
 
+(defun my-set-utf8 ()
+    (interactive)
+    (set-buffer-file-coding-system 'utf-8-unix))
+
 (provide 'init-macros)
