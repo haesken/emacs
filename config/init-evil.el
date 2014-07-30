@@ -28,6 +28,18 @@
 ;; (add-hook 'term-mode-hook 'evil-insert-state)
 (add-hook 'term-mode-hook 'evil-emacs-state)
 
+(defadvice evil-ex-search-next (after advice-for-evil-ex-search-next activate)
+  (recenter))
+
+(defadvice evil-ex-search-previous (after advice-for-evil-ex-search-previous activate)
+  (recenter))
+
+(defadvice evil-search-next (after advice-for-evil-ex-search-next activate)
+  (recenter))
+
+(defadvice evil-search-previous (after advice-for-evil-ex-search-previous activate)
+  (recenter))
+
 ;; Relative Line Numbers
 (global-linum-mode t)
 (require-package 'linum-relative)
