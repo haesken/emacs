@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# encoding: utf-8
 
 from os import path
 import os
