@@ -25,6 +25,7 @@
 
 ;; --- Basics ---
 (require 'init-core)
+(require 'init-macros)
 (require 'init-appearance)
 (require 'init-gui)
 
@@ -38,10 +39,10 @@
 ;; --- Filetypes ---
 (require 'init-lisp)
 (require 'init-markdown)
+(require 'init-js)
 
 ;; --- Evil & Commands ---
 (require 'init-evil)
-(require 'init-macros)
 (require 'init-bindings)
 
 ;; --- Things that need to be loaded last ---

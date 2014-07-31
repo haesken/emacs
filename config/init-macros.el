@@ -25,4 +25,11 @@
     (interactive)
     (set-buffer-file-coding-system 'utf-8-unix))
 
+(defmacro lazy-major-mode (pattern mode)
+  "Defines a new major-mode matched by PATTERN, installs MODE if necessary, and activates it."
+  `(add-to-list 'auto-mode-alist
+                '(,pattern . (lambda ()
+                             (require-package (quote ,mode))
+                             (,mode)))))
+
 (provide 'init-macros)
