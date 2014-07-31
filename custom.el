@@ -32,7 +32,7 @@
  '(powerline-evil-insert-face ((t (:inherit powerline-evil-base-face :background "#5fd7ff"))))
  '(powerline-evil-motion-face ((t (:inherit powerline-evil-base-face :background "#ae81ff"))))
  '(powerline-evil-normal-face ((t (:inherit powerline-evil-base-face :background "#a6e22e"))))
- '(powerline-evil-operator-face ((t (:inherit powerline-evil-operator-face :background "#a1efe4"))))
+ '(powerline-evil-operator-face ((t (:inherit powerline-evil-operator-face :background "#a1efe4" :foreground "#474747"))))
  '(powerline-evil-replace-face ((t (:inherit powerline-evil-base-face :background "#f92672"))))
  '(powerline-evil-visual-face ((t (:inherit powerline-evil-base-face :background "#fd971f"))))
  '(powerline-inactive1 ((t (:inherit mode-line-inactive :background "#333333" :weight bold))))
