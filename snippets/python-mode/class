@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: class
+# key: class
+# --
+class ${1:classname}(object):
+    """
+    """
+
+    def __init__(self):
+        """
+        """
+
+        pass
