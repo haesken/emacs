@@ -89,11 +89,15 @@ def main():
     # run_in_shell("git submodule foreach git checkout master")
 
     # ubuntu packages
-    # git curl python-setuptools xsel python pip python-virtualenv
-    # build-essential libgtk-3-dev libgif-dev libxpm-dev texinfo libtiff4-dev emacs
+    # emacs git curl python pip python-virtualenv python-setuptools xsel
+    # build-essential libgtk-3-dev libgif-dev libxpm-dev texinfo libtiff4-dev
+    # nodejs npm (symlink node to nodejs)
 
     # pip packages
     # virtualenv
+
+    # npm packages
+    # jslint
 
     # If the emacs directory is not a sub directory of "dotfiles",
     # assume the emacs directory is in ~, and create symlinks to
