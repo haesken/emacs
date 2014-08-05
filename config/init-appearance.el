@@ -7,8 +7,8 @@
 (add-to-list 'initial-frame-alist '(font . "Deja Vu Sans Mono:weight=bold"))
 (add-to-list 'default-frame-alist '(font . "Deja Vu Sans Mono:weight=bold"))
 
-;; Don't blink cursor
-(blink-cursor-mode 0)
+;; Blink cursor
+(blink-cursor-mode 1)
 
 ;; Highlight matching parens
 (setq show-paren-delay 0)

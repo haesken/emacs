@@ -27,7 +27,6 @@
 (require 'init-core)
 (require 'init-macros)
 (require 'init-appearance)
-(require 'init-gui)
 
 ;; --- Completion & Snippets ---
 (require 'init-yasnippet)
@@ -44,6 +43,7 @@
 ;; --- Evil & Commands ---
 (require 'init-evil)
 (require 'init-bindings)
+(require 'init-gui)
 
 ;; --- Things that need to be loaded last ---
 (require 'init-after)

@@ -1,7 +1,7 @@
 (after 'evil
-    ;; fix conflict with electric-indent-mode in 24.4
-    (define-key evil-insert-state-map [remap newline] 'newline)
-    (define-key evil-insert-state-map [remap newline-and-indent] 'newline-and-indent)
+    ;; ;; fix conflict with electric-indent-mode in 24.4
+    ;; (define-key evil-insert-state-map [remap newline] 'newline)
+    ;; (define-key evil-insert-state-map [remap newline-and-indent] 'newline-and-indent)
 
     (require-package 'key-chord)
     (key-chord-mode 1)
@@ -20,7 +20,7 @@
             "t w" 'set-fill-column                      ; text width
             "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
             "w w" 'toggle-truncate-lines                ; word wrap
-            "e u u" 'my-set-utf8
+            "e u u" 'my-set-utf8                        ; set buffer encoding to utf-8-unix
             ))
 
     ;; Comment or Uncomment Line/Selection
@@ -61,6 +61,34 @@
 (defun my-term ()
     (interactive)
     (ansi-term "/bin/zsh"))
+
+;; Disable evil's mouse bindings
+(eval-after-load "evil-maps"
+  (dolist
+    (map '(evil-motion-state-map
+           evil-insert-state-map
+           evil-emacs-state-map
+           evil-visual-state-map))
+    (define-key (eval map) [mouse-1] 'ignore)
+    (define-key (eval map) [down-mouse-1] 'ignore)
+    (define-key (eval map) [drag-mouse-1] 'ignore)
+    (define-key (eval map) [mouse-2] 'ignore)
+    (define-key (eval map) [down-mouse-2] 'ignore)
+    (define-key (eval map) [drag-mouse-2] 'ignore)
+    (define-key (eval map) [mouse-3] 'ignore)
+    (define-key (eval map) [down-mouse-3] 'ignore)
+    (define-key (eval map) [drag-mouse-3] 'ignore)
+  ))
+
+; Disable Mouse Buttons Globally
+(dolist (k '([mouse-1] [down-mouse-1] [drag-mouse-1] [double-mouse-1] [triple-mouse-1]
+             [mouse-2] [down-mouse-2] [drag-mouse-2] [double-mouse-2] [triple-mouse-2]
+             [mouse-3] [down-mouse-3] [drag-mouse-3] [double-mouse-3] [triple-mouse-3]
+             [mouse-4] [down-mouse-4] [drag-mouse-4] [double-mouse-4] [triple-mouse-4]
+             [mouse-5] [down-mouse-5] [drag-mouse-5] [double-mouse-5] [triple-mouse-5]))
+  (global-unset-key k))
+
+(setq mouse-drag-copy-region nil)
 
 ;; Global Window Management
 (define-prefix-command 'my-window-map)
