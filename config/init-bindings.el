@@ -104,4 +104,18 @@
 (define-key my-window-map (kbd "=") 'balance-windows)
 (define-key my-window-map (kbd "t") 'my-term)
 
+;; Switch to new window on creation
+(defadvice split-window-right (after move-point-to-new-window activate)
+  "Moves the point to the newly created window after splitting."
+  (other-window 1))
+
+(defadvice split-window-below (after move-point-to-new-window activate)
+  "Moves the point to the newly created window after splitting."
+  (other-window 1))
+
+;; Quickly switch windows
+(require-package 'switch-window)
+(require 'switch-window)
+(global-set-key (kbd "C-x o") 'switch-window)
+
 (provide 'init-bindings)
