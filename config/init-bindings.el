@@ -90,19 +90,23 @@
 
 (setq mouse-drag-copy-region nil)
 
-;; Global Window Management
+;; Global Window / Perspective Management
 (define-prefix-command 'my-window-map)
-(global-set-key (kbd "\C-w") 'my-window-map)
+(global-set-key (kbd "\C-a") 'my-window-map)
 (define-key my-window-map (kbd "h") 'windmove-left)
 (define-key my-window-map (kbd "j") 'windmove-down)
 (define-key my-window-map (kbd "k") 'windmove-up)
 (define-key my-window-map (kbd "l") 'windmove-right)
 (define-key my-window-map (kbd "v") 'split-window-right)
 (define-key my-window-map (kbd "b") 'split-window-below)
-(define-key my-window-map (kbd "x") 'delete-window)
+(define-key my-window-map (kbd "d") 'delete-window)
 (define-key my-window-map (kbd "o") 'delete-other-windows)
 (define-key my-window-map (kbd "=") 'balance-windows)
 (define-key my-window-map (kbd "t") 'my-term)
+(define-key my-window-map (kbd "c") 'persp-switch)
+(define-key my-window-map (kbd "s") 'persp-switch)
+(define-key my-window-map (kbd "r") 'persp-rename)
+(define-key my-window-map (kbd "x") 'persp-kill)
 
 ;; Switch to new window on creation
 (defadvice split-window-right (after move-point-to-new-window activate)

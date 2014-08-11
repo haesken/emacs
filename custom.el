@@ -26,6 +26,7 @@
  '(font-lock-warning-face ((t (:slant normal :weight bold))))
  '(linum-relative-current-face ((t (:foreground "#f8f8f2" :weight bold))))
  '(mode-line-inactive ((t (:inherit mode-line :background "#272822" :foreground "#75715E" :box (:line-width 1 :color "#3E3D31" :style unspecified) :weight bold))))
+ '(persp-selected-face ((t (:foreground "#f8f8f2" :weight bold))))
  '(powerline-active2 ((t (:inherit mode-line :background "#6b6b6b" :weight bold))))
  '(powerline-evil-base-face ((t (:inherit mode-line :foreground "#474747"))))
  '(powerline-evil-emacs-face ((t (:inherit powerline-evil-base-face :background "#be84ff"))))

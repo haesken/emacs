@@ -113,4 +113,8 @@
 (add-hook 'text-mode-hook 'whitespace-mode)
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
+(require-package 'perspective)
+(require 'perspective)
+(persp-mode t)
+
 (provide 'init-core)
