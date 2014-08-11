@@ -62,7 +62,7 @@
 ;; Run a terminal
 (defun my-term ()
     (interactive)
-    (ansi-term "/bin/zsh"))
+    (multi-term))
 
 ;; Disable evil's mouse bindings
 (eval-after-load "evil-maps"
