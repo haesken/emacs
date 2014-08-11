@@ -80,6 +80,7 @@
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-echo-area-message t)
 (setq inhibit-startup-message t)
+(setq initial-scratch-message nil)
 
 ;; Enable ido
 (require 'ido)
