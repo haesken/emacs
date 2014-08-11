@@ -11,7 +11,6 @@
     (after "evil-leader-autoloads"
         (evil-leader/set-leader ",")
         (evil-leader/set-key
-            "b d" 'kill-this-buffer                     ; buffer delete
             "y s" 'copy-selection-to-clipboard          ; yank selection
             "p"   'paste-from-clipboard                 ; paste
             "s p" 'flyspell-mode                        ; toggle spell checking
