@@ -48,14 +48,16 @@
     (define-key evil-motion-state-map ";" 'evil-ex)
 )
 
-;; Window Management
-;; Override evil's window management
+;; Unbind evil's window management
 (eval-after-load "evil-maps"
   (dolist
     (map '(evil-motion-state-map
            evil-insert-state-map
            evil-emacs-state-map))
     (define-key (eval map) "\C-w" nil)))
+
+;; Actually don't use C-w for anything
+(global-set-key (kbd "\C-w") 'ignore)
 
 ;; Run a terminal
 (defun my-term ()
@@ -90,6 +92,11 @@
 
 (setq mouse-drag-copy-region nil)
 
+;; Quickly switch windows
+(require-package 'switch-window)
+(require 'switch-window)
+(global-set-key (kbd "C-x o") 'switch-window)
+
 ;; Global Window / Perspective Management
 (define-prefix-command 'my-window-map)
 (global-set-key (kbd "\C-a") 'my-window-map)
@@ -97,6 +104,7 @@
 (define-key my-window-map (kbd "j") 'windmove-down)
 (define-key my-window-map (kbd "k") 'windmove-up)
 (define-key my-window-map (kbd "l") 'windmove-right)
+(define-key my-window-map (kbd "s") 'switch-window)
 (define-key my-window-map (kbd "v") 'split-window-right)
 (define-key my-window-map (kbd "b") 'split-window-below)
 (define-key my-window-map (kbd "d") 'delete-window)
@@ -104,7 +112,6 @@
 (define-key my-window-map (kbd "=") 'balance-windows)
 (define-key my-window-map (kbd "t") 'my-term)
 (define-key my-window-map (kbd "c") 'persp-switch)
-(define-key my-window-map (kbd "s") 'persp-switch)
 (define-key my-window-map (kbd "r") 'persp-rename)
 (define-key my-window-map (kbd "x") 'persp-kill)
 
@@ -116,10 +123,5 @@
 (defadvice split-window-below (after move-point-to-new-window activate)
   "Moves the point to the newly created window after splitting."
   (other-window 1))
-
-;; Quickly switch windows
-(require-package 'switch-window)
-(require 'switch-window)
-(global-set-key (kbd "C-x o") 'switch-window)
 
 (provide 'init-bindings)
