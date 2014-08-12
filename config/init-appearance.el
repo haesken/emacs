@@ -99,4 +99,7 @@
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; Don't wrap long lines in prog modes
+(add-hook 'prog-mode-hook (lambda () (setq truncate-lines t)))
+
 (provide 'init-appearance)
