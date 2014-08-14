@@ -88,6 +88,7 @@
                                      (powerline-raw "%l:" mode-line 'l)
                                      ; Column
                                      (powerline-raw (format-mode-line '(3 "%c")))
+                                     (powerline-raw " ")
                                      (powerline-raw (replace-regexp-in-string  "%" "%%" (format-mode-line '(-3 "%p"))) mode-line 'r))))
                      (concat (powerline-render lhs)
                              (powerline-fill mode-line (powerline-width rhs))
