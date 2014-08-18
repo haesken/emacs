@@ -58,11 +58,6 @@
 ;; Actually don't use C-w for anything
 (global-set-key (kbd "\C-w") 'ignore)
 
-;; Run a terminal
-(defun my-term ()
-    (interactive)
-    (multi-term))
-
 ;; Disable evil's mouse bindings
 (eval-after-load "evil-maps"
   (dolist

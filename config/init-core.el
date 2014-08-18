@@ -121,9 +121,4 @@
 (require 'autopair)
 (autopair-global-mode)
 
-(require-package 'multi-term)
-(require 'multi-term)
-(setq multi-term-program "/bin/zsh")
-(setq term-unbind-key-list '("C-z" "C-x" "C-c" "C-h" "C-y" "M-x" "<ESC>" "C-a"))
-
 (provide 'init-core)

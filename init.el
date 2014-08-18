@@ -42,6 +42,7 @@
 
 ;; --- Evil & Commands ---
 (require 'init-evil)
+(require 'init-term)
 (require 'init-bindings)
 (require 'init-gui)
 
