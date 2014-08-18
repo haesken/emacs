@@ -1,13 +1,4 @@
 (after 'evil
-    ;; ;; fix conflict with electric-indent-mode in 24.4
-    ;; (define-key evil-insert-state-map [remap newline] 'newline)
-    ;; (define-key evil-insert-state-map [remap newline-and-indent] 'newline-and-indent)
-
-    (require-package 'key-chord)
-    (key-chord-mode 1)
-    (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
-    (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
-
     (after "evil-leader-autoloads"
         (evil-leader/set-leader ",")
         (evil-leader/set-key
@@ -92,7 +83,6 @@
 ;; Quickly switch windows
 (require-package 'switch-window)
 (require 'switch-window)
-(global-set-key (kbd "C-x o") 'switch-window)
 
 ;; Global Window / Perspective Management
 (define-prefix-command 'my-window-map)

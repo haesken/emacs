@@ -100,6 +100,19 @@
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; Highlight trailing whitespace and tab characters
+(require 'whitespace)
+(setq-default whitespace-style '(face tabs tab-mark trailing))
+;; Display tab characters as "▶   "
+(setq whitespace-display-mappings
+  ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
+  '((tab-mark 9 [9654 9] [92 9]))); 9 TAB, 9654 BlACK RIGHT-POINTING TRIANGLE 「▶」
+
+;; Activate whitespace mode in text & programming modes
+(add-hook 'text-mode-hook 'whitespace-mode)
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
+
 ;; Don't wrap long lines in prog modes
 (add-hook 'prog-mode-hook (lambda () (setq truncate-lines t)))
 
