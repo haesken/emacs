@@ -80,6 +80,10 @@
 
 (setq mouse-drag-copy-region nil)
 
+; Go away overwrite mode
+(define-key global-map [(insert)] nil)
+(define-key global-map [(control insert)] 'overwrite-mode)
+
 ;; Quickly switch windows
 (require-package 'switch-window)
 (require 'switch-window)
