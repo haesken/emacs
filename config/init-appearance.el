@@ -74,9 +74,7 @@
                                      (powerline-major-mode mode-line)
                                      (powerline-raw " ")
                                      ; Minor Mode
-                                     ;; (powerline-raw "(" mode-line 'l)
                                      ;; (powerline-minor-modes mode-line)
-                                     ;; (powerline-raw ")" mode-line)
 
                                      (powerline-process mode-line)))
                           ; Right Side
