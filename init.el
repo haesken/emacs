@@ -25,6 +25,7 @@
 
 ;; --- Basics ---
 (require 'init-core)
+(require 'init-indent)
 (require 'init-macros)
 (require 'init-appearance)
 

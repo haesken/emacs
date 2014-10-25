@@ -23,46 +23,6 @@
 (setq coding-system-for-read 'utf-8-unix)
 (setq coding-system-for-write 'utf-8-unix)
 
-;; Use spaces not tabs
-(setq-default indent-tabs-mode nil)
-
-;; Default indent width 4 chars
-(setq tab-width 4)
-(setq-default tab-width 4)
-(setq tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60
-                      64 68 72 76 80 84 88 92 96 100 104 108 112
-                      116 120))
-
-;; http://www.emacswiki.org/emacs/BackspaceWhitespaceToTabStop
-(defvar my-offset 4 "My indentation offset. ")
-(defun backspace-whitespace-to-tab-stop ()
-  "Delete whitespace backwards to the next tab-stop, otherwise delete one character."
-  (interactive)
-  (if (or indent-tabs-mode
-          (region-active-p)
-          (save-excursion
-            (> (point) (progn (back-to-indentation)
-                              (point)))))
-      (call-interactively 'backward-delete-char-untabify)
-    (let ((movement (% (current-column) my-offset))
-          (p (point)))
-      (when (= movement 0) (setq movement my-offset))
-      ;; Account for edge case near beginning of buffer
-      (setq movement (min (- p 1) movement))
-      (save-match-data
-        (if (string-match "[^\t ]*\\([\t ]+\\)$" (buffer-substring-no-properties (- p movement) p))
-            (backward-delete-char (- (match-end 1) (match-beginning 1)))
-          (call-interactively 'backward-delete-char))))))
-
-;; Backspace deletes whitespace to the next tab stop
-(global-set-key [backspace] 'backspace-whitespace-to-tab-stop)
-
-; Stop doing crazy indent shit
-;; Global
-(global-set-key (kbd "TAB") 'tab-to-tab-stop)
-;; Per Mode
-;; (define-key text-mode-map (kbd "TAB") 'tab-to-tab-stop)
-
 ;; Set text width
 (setq-default fill-column 80)
 (add-hook 'text-mode-hook
