@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(fci-rule-width 8)
  '(flycheck-flake8rc " ~/dotfiles/emacs/config/flycheck_configs/flake8rc")
+ '(lua-indent-level 4)
  '(require-final-newline nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

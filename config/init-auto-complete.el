@@ -151,4 +151,6 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
 ;; Use custom keybinds
 (add-hook 'python-mode-hook 'jedi-config:setup-keys)
 
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
+
 (provide 'init-auto-complete)

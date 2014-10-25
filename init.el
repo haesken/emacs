@@ -39,6 +39,7 @@
 (require 'init-lisp)
 (require 'init-markdown)
 (require 'init-js)
+(require 'init-lua)
 
 ;; --- Evil & Commands ---
 (require 'init-evil)
