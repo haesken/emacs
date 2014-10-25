@@ -13,6 +13,7 @@
 
 ;; Load files in config/
 (add-to-list 'load-path (concat user-emacs-directory "config"))
+(add-to-list 'load-path (concat user-emacs-directory "elisp"))
 
 (require 'cl)
 (require 'init-packages)
@@ -41,6 +42,7 @@
 (require 'init-markdown)
 (require 'init-js)
 (require 'init-lua)
+(require 'init-autoit)
 
 ;; --- Evil & Commands ---
 (require 'init-evil)
