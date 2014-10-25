@@ -34,7 +34,7 @@
 ;; Don't make lock files
 (setq create-lockfiles nil)
 
-;;
+;; Period and single space consitutes the end of a sentence
 (setq sentence-end-double-space nil)
 
 ;; Start completely blank
