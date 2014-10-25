@@ -64,8 +64,8 @@
 (require 'perspective)
 (persp-mode t)
 
-(require-package 'autopair)
-(require 'autopair)
-(autopair-global-mode)
+;; (require-package 'autopair)
+;; (require 'autopair)
+;; (autopair-global-mode)
 
 (provide 'init-core)
