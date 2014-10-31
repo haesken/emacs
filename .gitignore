@@ -6,3 +6,4 @@ el-get
 *.elc
 .python-environments
 ac-comphist.dat
+build/
