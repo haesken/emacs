@@ -8,8 +8,8 @@
   (interactive)
   (multi-term))
 
-(add-hook 'term-mode-hook
-  (lambda ()
-    (define-key term-raw-map (kbd "C-r") nil)))
+;; (add-hook 'term-mode-hook
+;;   (lambda ()
+;;     (define-key term-raw-map (kbd "C-r") nil)))
 
 (provide 'init-term)
