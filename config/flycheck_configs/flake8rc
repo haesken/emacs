@@ -3,5 +3,5 @@
 # E128
 # E221
 # E241
-ignore = E126,E128,E221,E241
+ignore = E123,E126,E128,E221,E241
 max-line-length = 99999

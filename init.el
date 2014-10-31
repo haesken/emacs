@@ -39,6 +39,7 @@
 
 ;; --- Filetypes ---
 (require 'init-lisp)
+(require 'init-python)
 (require 'init-markdown)
 (require 'init-js)
 (require 'init-lua)
