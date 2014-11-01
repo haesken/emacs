@@ -63,7 +63,6 @@
                                      ; Read Only
                                      (when buffer-read-only
                                        (powerline-raw "" mode-line))
-                                     ; (powerline-raw (concat "[" (mode-line-eol-desc) "]") mode-line)
                                      (when (and (boundp 'which-func-mode) which-func-mode)
                                        (powerline-raw which-func-format nil 'l))
                                      (powerline-raw " ")
@@ -71,10 +70,13 @@
                                      (when (and vc-mode buffer-file-name)
                                        (let ((backend (vc-backend buffer-file-name)))
                                          (when backend
-                                           (concat (powerline-raw (format "%s/%s" backend (vc-working-revision buffer-file-name backend)))))))
-                                     (powerline-raw " ")
-                                     (powerline-major-mode mode-line)
-                                     (powerline-raw " ")
+                                           (concat
+                                             (powerline-raw (format "%s/%s" backend (vc-working-revision buffer-file-name backend)))
+                                             (powerline-raw " ")))))
+                                     ; Major Mode
+                                     (concat
+                                       (powerline-major-mode mode-line)
+                                       (powerline-raw " "))
                                      ; Minor Mode
                                      ;; (powerline-minor-modes mode-line)
 
