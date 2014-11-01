@@ -52,8 +52,10 @@
                                      (powerline-buffer-id `(mode-line-buffer-id ,mode-line) 'l)
                                      (powerline-raw " ")
                                      ; File Encoding
-                                     (powerline-raw (format "%s" (symbol-name buffer-file-coding-system)))
-                                     (powerline-raw " ")
+                                     (if (not (equal buffer-file-coding-system nil))
+                                       (concat
+                                         (powerline-raw (format "%s" buffer-file-coding-system) mode-line)
+                                         (powerline-raw " ")))
                                      ; Modified
                                      (if (buffer-modified-p)
                                        (powerline-raw "+" mode-line)

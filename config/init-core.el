@@ -18,10 +18,10 @@
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (set-default buffer-file-coding-system 'utf-8-unix)
-(set-default-coding-systems 'utf-8-unix)
+;; (set-default-coding-systems 'utf-8-unix)
 (prefer-coding-system 'utf-8-unix)
-(setq coding-system-for-read 'utf-8-unix)
-(setq coding-system-for-write 'utf-8-unix)
+;; (setq coding-system-for-read 'utf-8-unix)
+;; (setq coding-system-for-write 'utf-8-unix)
 
 ;; Set text width
 (setq-default fill-column 80)
