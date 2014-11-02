@@ -27,6 +27,21 @@
 (require-package 'powerline-evil)
 (require 'powerline-evil)
 
+;; Helper function
+; https://superuser.com/questions/573902/dired-mode-use-modeline-for-path-name
+(defun shorten-directory (dir max-length)
+  "Show up to `max-length' characters of a directory name `dir'."
+  (let ((path (reverse (split-string (abbreviate-file-name dir) "/")))
+        (output ""))
+    (when (and path (equal "" (car path)))
+      (setq path (cdr path)))
+    (while (and path (< (length output) (- max-length 4)))
+      (setq output (concat (car path) "/" output))
+      (setq path (cdr path)))
+    (when path
+      (setq output (concat "../" output)))
+    output))
+
 (defun my-powerline-evil-vim-color-theme ()
   "Powerline's Vim-like mode-line with evil state at the beginning in color."
   (interactive)
@@ -48,8 +63,14 @@
                                      (let ((evil-face (powerline-evil-face)))
                                        (if evil-mode
                                            (powerline-raw (powerline-evil-tag) evil-face)))
-                                     ; Buffer ID
-                                     (powerline-buffer-id `(mode-line-buffer-id ,mode-line) 'l)
+                                     ; File path / buffer name
+                                     ; If it is a real file show full file path,
+                                     ; if it isn't then just show the buffer name
+                                     (if (not (equal buffer-file-name nil))
+                                       (concat
+                                         (powerline-raw (shorten-directory default-directory 30) `(powerline-raw ,mode-line) 'l)
+                                         (powerline-raw (buffer-name) `(mode-line-buffer-id ,mode-line)))
+                                       (powerline-raw (buffer-name) `(mode-line-buffer-id ,mode-line) 'l))
                                      (powerline-raw " ")
                                      ; File Encoding
                                      (if (not (equal buffer-file-coding-system nil))
