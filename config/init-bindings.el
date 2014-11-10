@@ -11,6 +11,7 @@
             "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
             "w w" 'toggle-truncate-lines                ; word wrap
             "e u u" 'my-set-utf8                        ; set buffer encoding to utf-8-unix
+            "t" 'my-term                                ; terminal
             ))
 
     ;; Comment or Uncomment Line/Selection
@@ -84,6 +85,11 @@
 (define-key global-map [(insert)] nil)
 (define-key global-map [(control insert)] 'overwrite-mode)
 
+; New buffer
+(defun new-buffer ()
+  (interactive)
+  (switch-to-buffer (generate-new-buffer "*No Name*")))
+
 ;; Quickly switch windows
 (require-package 'switch-window)
 (require 'switch-window)
@@ -91,20 +97,24 @@
 ;; Global Window / Perspective Management
 (define-prefix-command 'my-window-map)
 (global-set-key (kbd "\C-a") 'my-window-map)
+;; Perspectives
+(define-key my-window-map (kbd "c") 'persp-switch)
+(define-key my-window-map (kbd "z") 'persp-rename)
+(define-key my-window-map (kbd "x") 'persp-kill)
+;; Windows
 (define-key my-window-map (kbd "h") 'windmove-left)
 (define-key my-window-map (kbd "j") 'windmove-down)
 (define-key my-window-map (kbd "k") 'windmove-up)
 (define-key my-window-map (kbd "l") 'windmove-right)
-(define-key my-window-map (kbd "s") 'switch-window)
+(define-key my-window-map (kbd "g") 'switch-window)
 (define-key my-window-map (kbd "v") 'split-window-right)
 (define-key my-window-map (kbd "b") 'split-window-below)
-(define-key my-window-map (kbd "d") 'delete-window)
+(define-key my-window-map (kbd "i") 'delete-window)
 (define-key my-window-map (kbd "o") 'delete-other-windows)
-(define-key my-window-map (kbd "=") 'balance-windows)
-(define-key my-window-map (kbd "t") 'my-term)
-(define-key my-window-map (kbd "c") 'persp-switch)
-(define-key my-window-map (kbd "r") 'persp-rename)
-(define-key my-window-map (kbd "x") 'persp-kill)
+;; Buffers
+(define-key my-window-map (kbd "s") 'ido-switch-buffer)
+(define-key my-window-map (kbd "d") 'kill-this-buffer)
+(define-key my-window-map (kbd "f") 'new-buffer)
 
 ;; Switch to new window on creation
 (defadvice split-window-right (after move-point-to-new-window activate)
