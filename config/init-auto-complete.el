@@ -2,12 +2,16 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-show-menu-immediately-on-auto-complete t)
+(setq ac-delay .1)
+(setq ac-auto-show-menu (* ac-delay 1))
 
 (require-package 'jedi)
 (require 'jedi)
 (require-package 'epc)
 (require 'epc)
 
+(setq completion-auto-help nil)
 
 ;; Global Jedi config vars
 
