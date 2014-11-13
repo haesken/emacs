@@ -69,6 +69,8 @@ class Manager(object):
             print(colored_if_avail(
                 "Made {dir}".format(dir=self.build_dir), "yellow"))
 
+        run_in_shell("sudo apt-get update")
+
     def remove(self):
         chdir(self.emacs_dir)
         print(colored_if_avail("Purging old emacs...", "yellow"))
@@ -85,6 +87,7 @@ class Manager(object):
     def depends(self):
         print(colored_if_avail("Installing emacs depends...", "yellow"))
         run_in_shell(["sudo apt-get build-dep emacs24"])
+        run_in_shell(["sudo apt-get install libncurses5-dev"])
 
         print(colored_if_avail("Installing emacs build depends...", "yellow"))
         run_in_shell(["sudo apt-get install libevent-dev cmake checkinstall"])
