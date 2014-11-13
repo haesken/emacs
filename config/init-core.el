@@ -54,6 +54,10 @@
 (require 'ido-vertical-mode)
 (ido-vertical-mode 1)
 
+(require-package 'helm)
+(require 'helm-config)
+(helm-mode 1)
+
 ;; Enable spell checking for text-mode buffers
 (require 'flyspell)
 (add-hook 'text-mode-hook 'flyspell-mode)

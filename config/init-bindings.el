@@ -112,6 +112,7 @@
 (define-key my-window-map (kbd "o") 'delete-other-windows)
 ;; Buffers
 (define-key my-window-map (kbd "s") 'ido-switch-buffer)
+(define-key my-window-map (kbd "w") 'helm-command-prefix)
 (define-key my-window-map (kbd "d") 'kill-this-buffer)
 (define-key my-window-map (kbd "f") 'new-buffer)
 ;; Terminal
