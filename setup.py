@@ -99,6 +99,9 @@ def main():
     # npm packages
     # jslint
 
+    # rust
+    # ppa:hansjorg/rust
+
     # If the emacs directory is not a sub directory of "dotfiles",
     # assume the emacs directory is in ~, and create symlinks to
     # the emacs folder. (for standalone installations)

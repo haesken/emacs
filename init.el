@@ -44,6 +44,7 @@
 (require 'init-js)
 (require 'init-lua)
 (require 'init-autoit)
+(require 'init-rust)
 
 ;; --- Evil & Commands ---
 (require 'init-evil)
