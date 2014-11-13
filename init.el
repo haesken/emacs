@@ -37,6 +37,9 @@
 ;; --- Syntax Checking ---
 (require 'init-flycheck)
 
+;; --- Version Control ---
+(require 'init-vcs)
+
 ;; --- Filetypes ---
 (require 'init-lisp)
 (require 'init-python)
