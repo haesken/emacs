@@ -11,7 +11,6 @@
             "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
             "w w" 'toggle-truncate-lines                ; word wrap
             "e u u" 'my-set-utf8                        ; set buffer encoding to utf-8-unix
-            "t" 'my-term                                ; terminal
             ))
 
     ;; Comment or Uncomment Line/Selection
@@ -115,6 +114,8 @@
 (define-key my-window-map (kbd "s") 'ido-switch-buffer)
 (define-key my-window-map (kbd "d") 'kill-this-buffer)
 (define-key my-window-map (kbd "f") 'new-buffer)
+;; Terminal
+(define-key my-window-map (kbd "t") 'my-term)
 
 ;; Switch to new window on creation
 (defadvice split-window-right (after move-point-to-new-window activate)
