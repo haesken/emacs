@@ -48,6 +48,7 @@
 (require 'init-lua)
 (require 'init-autoit)
 (require 'init-rust)
+(require 'init-haskell)
 
 ;; --- Evil & Commands ---
 (require 'init-evil)
