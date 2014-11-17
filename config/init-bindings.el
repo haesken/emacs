@@ -67,6 +67,9 @@
     (define-key (eval map) [drag-mouse-3] 'ignore)
   ))
 
+; Disable scroll wheel
+(mouse-wheel-mode -1)
+
 ; Disable Mouse Buttons Globally
 (dolist (k '([mouse-1] [down-mouse-1] [drag-mouse-1] [double-mouse-1] [triple-mouse-1]
              [mouse-2] [down-mouse-2] [drag-mouse-2] [double-mouse-2] [triple-mouse-2]

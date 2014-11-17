@@ -24,37 +24,32 @@
 (when (file-exists-p custom-file)
     (load custom-file))
 
-;; --- Basics ---
+;; --- Global ---
 (require 'init-core)
 (require 'init-indent)
 (require 'init-macros)
 (require 'init-appearance)
+(require 'init-evil)
+(require 'init-term)
+(require 'init-bindings)
 
-;; --- Completion & Snippets ---
-(require 'init-yasnippet)
+;; --- Programming Features ---
 (require 'init-auto-complete)
-
-;; --- Syntax Checking ---
+(require 'init-yasnippet)
 (require 'init-flycheck)
 
 ;; --- Version Control ---
 (require 'init-vcs)
 
-;; --- Filetypes ---
-(require 'init-lisp)
-(require 'init-python)
-(require 'init-markdown)
-(require 'init-js)
-(require 'init-lua)
+;; --- Languages ---
 (require 'init-autoit)
-(require 'init-rust)
 (require 'init-haskell)
-
-;; --- Evil & Commands ---
-(require 'init-evil)
-(require 'init-term)
-(require 'init-bindings)
-(require 'init-gui)
+(require 'init-js)
+(require 'init-lisp)
+(require 'init-lua)
+(require 'init-markdown)
+(require 'init-python)
+(require 'init-rust)
 
 ;; --- Things that need to be loaded last ---
 (require 'init-after)
