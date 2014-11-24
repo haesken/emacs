@@ -96,6 +96,13 @@
 (require-package 'switch-window)
 (require 'switch-window)
 
+(defun kill-buffer-and-window ()
+  (interactive)
+  (progn
+    (kill-this-buffer)
+    (delete-window))
+  (message ""))
+
 ;; Global Window / Perspective Management
 (define-prefix-command 'my-window-map)
 (global-set-key (kbd "\C-a") 'my-window-map)
@@ -108,14 +115,15 @@
 (define-key my-window-map (kbd "j") 'windmove-down)
 (define-key my-window-map (kbd "k") 'windmove-up)
 (define-key my-window-map (kbd "l") 'windmove-right)
-(define-key my-window-map (kbd "g") 'switch-window)
+(define-key my-window-map (kbd "w") 'switch-window)
 (define-key my-window-map (kbd "v") 'split-window-right)
 (define-key my-window-map (kbd "b") 'split-window-below)
 (define-key my-window-map (kbd "i") 'delete-window)
 (define-key my-window-map (kbd "o") 'delete-other-windows)
+(define-key my-window-map (kbd "u") 'kill-buffer-and-window)
 ;; Buffers
 (define-key my-window-map (kbd "s") 'ido-switch-buffer)
-(define-key my-window-map (kbd "w") 'helm-command-prefix)
+(define-key my-window-map (kbd "e") 'helm-command-prefix)
 (define-key my-window-map (kbd "d") 'kill-this-buffer)
 (define-key my-window-map (kbd "f") 'new-buffer)
 ;; Terminal
