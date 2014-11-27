@@ -55,7 +55,13 @@
 (ido-vertical-mode 1)
 
 (require-package 'helm)
+; (require-package 'helm-ls-git)
+; (require 'helm-ls-git)
 (require 'helm-config)
+; (helm :sources '(helm-source-findutils
+;                  helm-source-ls-git
+;                  helm-source-locate)
+;       :buffer "*helm-find-files*"))
 (helm-mode 1)
 
 ;; Enable spell checking for text-mode buffers
