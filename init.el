@@ -42,6 +42,7 @@
 (require 'init-vcs)
 
 ;; --- Languages ---
+(require 'init-autohotkey)
 (require 'init-autoit)
 (require 'init-haskell)
 (require 'init-js)
