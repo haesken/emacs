@@ -156,5 +156,6 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
 (add-hook 'python-mode-hook 'jedi-config:setup-keys)
 
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'rust-mode))
 
 (provide 'init-auto-complete)
