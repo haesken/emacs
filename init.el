@@ -54,3 +54,5 @@
 
 ;; --- Things that need to be loaded last ---
 (require 'init-after)
+
+;; (toggle-debug-on-quit)
