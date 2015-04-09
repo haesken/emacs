@@ -17,8 +17,8 @@
     (define-key evil-normal-state-map (kbd "gc") 'evilnc-comment-or-uncomment-lines)
 
     ;; Expand Snippets
-    (define-key evil-normal-state-map (kbd "M-e") 'yas/expand)
-    (define-key evil-insert-state-map (kbd "M-e") 'yas/expand)
+    (define-key evil-normal-state-map (kbd "M-e") 'yas-expand)
+    (define-key evil-insert-state-map (kbd "M-e") 'yas-expand)
 
     ;; Navigate by visual lines
     (define-key evil-motion-state-map "j" 'evil-next-visual-line)
