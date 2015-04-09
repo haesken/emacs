@@ -97,7 +97,7 @@ class Manager(object):
             chdir(self.build_dir)
             print(colored_if_avail(
                 "emacs git repo not present, cloning...", "yellow"))
-            run_in_shell("git clone --depth 1 git://git.sv.gnu.org/emacs.git {dir}".format(
+            run_in_shell("git clone --depth 1 git://git.savannah.gnu.org/emacs.git {dir}".format(
                     dir=path.abspath(path.join(self.build_dir, "emacs"))))
 
     def update(self):
