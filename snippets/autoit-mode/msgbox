@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: msgbox
+# key: MsgBox
+# --
+MsgBox($MB_SYSTEMMODAL, "${1:debug}", "${2:text}")

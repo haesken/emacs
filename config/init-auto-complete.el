@@ -157,5 +157,6 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
 
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'rust-mode))
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'au3-mode))
 
 (provide 'init-auto-complete)
