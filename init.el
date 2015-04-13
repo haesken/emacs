@@ -51,6 +51,7 @@
 (require 'init-markdown)
 (require 'init-python)
 (require 'init-rust)
+(require 'init-csharp)
 
 ;; --- Things that need to be loaded last ---
 (require 'init-after)
