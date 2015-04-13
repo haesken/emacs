@@ -6,6 +6,10 @@
  '(fci-rule-width 8)
  '(flycheck-flake8rc " ~/dotfiles/emacs/config/flycheck_configs/flake8rc")
  '(lua-indent-level 4)
+ '(magit-use-overlays nil)
+ '(package-selected-packages
+   (quote
+    (csharp-mode rust-mode markdown-mode lua-mode elisp-slime-nav coffee-mode js2-mode haskell-mode xahk-mode magit flycheck yasnippet jedi auto-complete switch-window multi-term linum-relative evil-indent-textobject evil-surround evil-nerd-commenter evil-leader rainbow-delimiters powerline-evil powerline monokai-theme perspective helm ido-vertical-mode)))
  '(require-final-newline nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
