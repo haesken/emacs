@@ -1,3 +1,5 @@
+(package-initialize)
+
 (defgroup dotemacs nil
     "Custom configuration for dotemacs."
     :group 'local)
