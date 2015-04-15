@@ -26,6 +26,11 @@ May be necessary for some GUI environments (e.g., Mac OS X)")
 
 (defvar jedi-config:python-module-sentinel "__init__.py")
 
+(setq jedi:environment-root "jedi")
+(setq jedi:environment-virtualenv
+      (append python-environment-virtualenv
+              '("--python" "/usr/bin/python")))
+
 ;; Helper functions
 
 ;; Small helper to scrape text from shell output
