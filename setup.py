@@ -53,7 +53,7 @@ def ensure_link(target, link_name):
             "{target} IS A SYMLINK THAT POINTS TO {loc}, OVERWRITE?".format(
                     target=target, loc=os.readlink(target)), "red"))
 
-        if str(raw_input(
+        if str(input(
                 colored_if_avail("y/n", "red"))).lower().startswith("y"):
             os.symlink(target, link_name)
 
@@ -63,7 +63,7 @@ def ensure_link(target, link_name):
             "{target} IS AN EMPTY DIRECTORY, OVERWRITE?".format(
                     target=target), "red"))
 
-        if str(raw_input(
+        if str(input(
                 colored_if_avail("y/n", "red"))).lower().startswith("y"):
             os.rmdir(target)
             os.symlink(target, link_name)
@@ -74,7 +74,7 @@ def ensure_link(target, link_name):
             "{target} IS A DIRECTORY, REMOVE?".format(target=target),
                     "red"))
 
-        if str(raw_input(
+        if str(input(
                 colored_if_avail("y/n", "red"))).lower().startswith("y"):
             os.rmdir(target)
             os.symlink(target, link_name)
