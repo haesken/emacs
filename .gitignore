@@ -8,3 +8,5 @@ el-get
 ac-comphist.dat
 build/
 recentf
+session*
+ido.last
