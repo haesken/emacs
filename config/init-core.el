@@ -23,6 +23,9 @@
 ;; (setq coding-system-for-read 'utf-8-unix)
 ;; (setq coding-system-for-write 'utf-8-unix)
 
+;; Don't always insert a final newline
+(setq require-final-newline nil)
+
 ;; Set text width
 (setq-default fill-column 80)
 (add-hook 'text-mode-hook
