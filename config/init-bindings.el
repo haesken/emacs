@@ -11,6 +11,9 @@
             "w s" 'delete-trailing-whitespace           ; clean trailing whitespace
             "w w" 'toggle-truncate-lines                ; word wrap
             "e u u" 'my-set-utf8                        ; set buffer encoding to utf-8-unix
+            "e b" 'eval-buffer
+            "e r" 'eval-region
+            "e m" 'eval-minibuffer
             ))
 
     ;; Comment or Uncomment Line/Selection
