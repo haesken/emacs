@@ -67,6 +67,9 @@
 ;       :buffer "*helm-find-files*"))
 ;; (helm-mode 1)
 
+(require-package 'csv-mode)
+(require 'csv-mode)
+
 ;; Enable spell checking for text-mode buffers
 (require 'flyspell)
 (add-hook 'text-mode-hook 'flyspell-mode)
