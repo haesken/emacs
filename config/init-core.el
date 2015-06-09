@@ -38,6 +38,10 @@
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
 
+; Helm
+(require-package 'helm)
+(require 'helm-config)
+(helm-mode 1)
 
 (require-package 'csv-mode)
 (require 'csv-mode)
