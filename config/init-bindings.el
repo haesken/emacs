@@ -3,6 +3,7 @@
         (evil-leader/set-leader ",")
         (evil-leader/set-key
             "y s" 'copy-selection-to-clipboard          ; yank selection
+            "y a" 'copy-buffer-to-clipboard             ; yank whole buffer
             "p"   'paste-from-clipboard                 ; paste
             "s p" 'flyspell-mode                        ; toggle spell checking
             "s b" 'flyspell-buffer                      ; spell check buffer

@@ -1,5 +1,6 @@
 ;; System copy/paste
-;; Requires xsel packag
+
+;; Requires xsel system package
 (defun copy-selection-to-clipboard ()
     (interactive)
     (if (display-graphic-p)
@@ -12,6 +13,12 @@
                 (message "Yanked region to clipboard!")
                 (deactivate-mark))
             (message "No region active; can't yank to clipboard!"))))
+
+(defun copy-buffer-to-clipboard ()
+  (interactive)
+  (progn
+    (mark-whole-buffer)
+    (copy-selection-to-clipboard)))
 
 (defun paste-from-clipboard ()
     (interactive)
