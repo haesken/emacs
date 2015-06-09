@@ -18,18 +18,10 @@
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (set-default buffer-file-coding-system 'utf-8-unix)
-;; (set-default-coding-systems 'utf-8-unix)
 (prefer-coding-system 'utf-8-unix)
-;; (setq coding-system-for-read 'utf-8-unix)
-;; (setq coding-system-for-write 'utf-8-unix)
 
 ;; Don't always insert a final newline
 (setq require-final-newline nil)
-
-;; Set text width
-(setq-default fill-column 80)
-(add-hook 'text-mode-hook
-  (lambda () (set-fill-column 80)))
 
 ;; No bells
 (setq ring-bell-function (lambda () ()))
@@ -46,26 +38,6 @@
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
 
-;; Enable ido
-(require 'ido)
-;; (setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode t)
-
-;; Display ido results vertically
-(require-package 'ido-vertical-mode)
-(require 'ido-vertical-mode)
-(ido-vertical-mode 1)
-
-;; (require-package 'helm)
-; (require-package 'helm-ls-git)
-; (require 'helm-ls-git)
-;; (require 'helm-config)
-; (helm :sources '(helm-source-findutils
-;                  helm-source-ls-git
-;                  helm-source-locate)
-;       :buffer "*helm-find-files*"))
-;; (helm-mode 1)
 
 (require-package 'csv-mode)
 (require 'csv-mode)
@@ -79,9 +51,5 @@
 (require-package 'perspective)
 (require 'perspective)
 (persp-mode t)
-
-;; (require-package 'autopair)
-;; (require 'autopair)
-;; (autopair-global-mode)
 
 (provide 'init-core)

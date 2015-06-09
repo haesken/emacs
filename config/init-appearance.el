@@ -14,12 +14,6 @@
 (setq show-paren-delay 0)
 (show-paren-mode 1)
 
-;; Show fill column
-;; (require-package 'fill-column-indicator)
-;; (require 'fill-column-indicator)
-;; (add-hook 'prog-mode-hook 'fci-mode)
-;; (add-hook 'markdown-mode-hook 'fci-mode)
-
 ;; Powerline
 (require-package 'powerline)
 (require 'powerline)
@@ -134,7 +128,6 @@
 ;; Activate whitespace mode in text & programming modes
 (add-hook 'text-mode-hook 'whitespace-mode)
 (add-hook 'prog-mode-hook 'whitespace-mode)
-
 
 ;; Don't wrap long lines in prog modes
 (add-hook 'prog-mode-hook (lambda () (setq truncate-lines t)))
