@@ -54,6 +54,11 @@
 (require 'flyspell)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'flyspell-buffer)
+(dolist (mode '(emacs-lisp-mode-hook
+                python-mode))
+  (add-hook mode
+            '(lambda ()
+               'flyspell-prog-mode)))
 (setq flyspell-issue-message-flag nil)
 
 (require-package 'perspective)
