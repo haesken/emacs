@@ -65,4 +65,6 @@
 (require 'perspective)
 (persp-mode t)
 
+(setq echo-keystrokes 0.02)
+
 (provide 'init-core)
