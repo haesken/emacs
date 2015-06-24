@@ -1,10 +1,15 @@
 (require-package 'flycheck)
+(require 'flycheck)
 
-(after 'flycheck
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (setq flycheck-checkers (delq 'emacs-lisp-checkdoc flycheck-checkers))
-  (setq flycheck-standard-error-navigation nil))
+(setq flycheck-flake8rc (concat user-emacs-directory "config/flycheck_configs/flake8rc"))
+(setq flycheck-flake8-maximum-line-length 200)
 
-(global-flycheck-mode t)
+(setq flycheck-pylintrc (concat user-emacs-directory "config/flycheck_configs/pylintrc"))
+
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc python-flake8)))
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'prog-mode-hook 'flycheck-mode)
 
 (provide 'init-flycheck)

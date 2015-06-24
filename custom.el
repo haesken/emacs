@@ -4,7 +4,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(fci-rule-width 8)
- '(flycheck-flake8rc " ~/dotfiles/emacs/config/flycheck_configs/flake8rc")
  '(lua-indent-level 4)
  '(magit-use-overlays nil)
  '(package-selected-packages
