@@ -18,8 +18,4 @@
 ;; Start completion at method dot
 (setq jedi:complete-on-dot t)
 
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'lua-mode))
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'rust-mode))
-(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'au3-mode))
-
 (provide 'init-auto-complete)
