@@ -130,6 +130,13 @@
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
 ;; Don't wrap long lines in prog modes
-(add-hook 'prog-mode-hook (lambda () (setq truncate-lines t)))
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (setq truncate-lines t)
+            (visual-line-mode t)))
+
+(add-hook 'text-mode-hook
+          (lambda ()
+            (visual-line-mode t)))
 
 (provide 'init-appearance)
