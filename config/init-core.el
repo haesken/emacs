@@ -38,13 +38,17 @@
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
 
-; Helm
+; Helm & Projectile
 (require-package 'helm)
 (require 'helm-config)
-(helm-mode 1)
+(require-package 'projectile)
+(require 'projectile)
+(require-package 'helm-projectile)
+(require 'helm-projectile)
 
-(require-package 'csv-mode)
-(require 'csv-mode)
+(projectile-global-mode t)
+(setq projectile-completion-system 'helm)
+(helm-mode 1)
 
 ;; Enable spell checking for text-mode buffers
 (require 'flyspell)
