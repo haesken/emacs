@@ -28,9 +28,28 @@
                 (message "graphics active"))
             (insert (shell-command-to-string "xsel -o -b"))))
 
+(defun eval-region-and-deselect ()
+  (interactive)
+  (if (region-active-p)
+    (progn
+        (eval-region (region-beginning) (region-end))
+        (deactivate-mark))))
+
 (defun my-set-utf8 ()
     (interactive)
     (set-buffer-file-coding-system 'utf-8-unix))
+
+(defun my-recompile-plugins ()
+  "Byte-compile all plugins."
+  (interactive)
+  (byte-recompile-directory (concat user-emacs-directory "elpa") 0)
+  (byte-recompile-directory (concat user-emacs-directory "elisp") 0))
+
+(defun my-recompile-config ()
+  "Byte-compile all configs."
+  (interactive)
+  (byte-recompile-directory (concat user-emacs-directory "config") 0))
+
 
 (defmacro lazy-major-mode (pattern mode)
   "Defines a new major-mode matched by PATTERN, installs MODE if necessary, and activates it."

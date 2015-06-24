@@ -13,7 +13,7 @@
             "w w" 'toggle-truncate-lines                ; word wrap
             "e u u" 'my-set-utf8                        ; set buffer encoding to utf-8-unix
             "e b" 'eval-buffer
-            "e r" 'eval-region
+            "e r" 'eval-region-and-deselect
             "e m" 'eval-minibuffer
             ))
 
