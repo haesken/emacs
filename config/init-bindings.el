@@ -107,6 +107,11 @@
     (delete-window))
   (message ""))
 
+;; Stop Org from stealing C-a
+(add-hook 'org-mode-hook
+      (lambda ()
+        (local-unset-key (kbd "C-a"))))
+
 ;; Global Window / Perspective Management
 (define-prefix-command 'my-window-map)
 (global-set-key (kbd "\C-a") 'my-window-map)
