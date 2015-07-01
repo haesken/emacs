@@ -40,7 +40,6 @@
 (require 'init-appearance)
 (require 'init-evil)
 (require 'init-term)
-(require 'init-bindings)
 
 ;; --- Programming Features ---
 (require 'init-auto-complete)
@@ -53,16 +52,18 @@
 ;; --- Languages ---
 (require 'init-autohotkey)
 (require 'init-autoit)
+(require 'init-csharp)
 (require 'init-haskell)
 (require 'init-js)
 (require 'init-lisp)
 (require 'init-lua)
 (require 'init-markdown)
+(require 'init-org)
 (require 'init-python)
 (require 'init-rust)
-(require 'init-csharp)
 
 ;; --- Things that need to be loaded last ---
+(require 'init-bindings)
 (require 'init-after)
 
 ;; (toggle-debug-on-quit)
