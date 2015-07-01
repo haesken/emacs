@@ -117,6 +117,19 @@
 (require-package 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; Rotate between orange, green, and cyan for rainbow delimiters
+(add-hook 'rainbow-delimiters-mode-hook
+          (lambda ()
+            (set-face-attribute 'rainbow-delimiters-depth-1-face nil :foreground "#fd971f")
+            (set-face-attribute 'rainbow-delimiters-depth-2-face nil :foreground "#a6e22e")
+            (set-face-attribute 'rainbow-delimiters-depth-3-face nil :foreground "#a1efe4")
+            (set-face-attribute 'rainbow-delimiters-depth-4-face nil :foreground "#fd971f")
+            (set-face-attribute 'rainbow-delimiters-depth-5-face nil :foreground "#a6e22e")
+            (set-face-attribute 'rainbow-delimiters-depth-6-face nil :foreground "#a1efe4")
+            (set-face-attribute 'rainbow-delimiters-depth-7-face nil :foreground "#fd971f")
+            (set-face-attribute 'rainbow-delimiters-depth-8-face nil :foreground "#a6e22e")
+            (set-face-attribute 'rainbow-delimiters-depth-9-face nil :foreground "#a1efe4")))
+
 ;; Highlight trailing whitespace and tab characters
 (require 'whitespace)
 (setq-default whitespace-style '(face tabs tab-mark trailing))
